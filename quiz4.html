@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz 4</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form>
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="first" placeholder="John" required />
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last" placeholder="Smith" required/>
+      <br />
+
+      <label>
+        Male
+        <input type="radio" name="sex" value="male" />
+      </label>
+      <label>
+        Female
+        <input type="radio" name="sex" value="female" />
+      </label>
+      <label>
+        Other
+        <input type="radio" name="sex" value="other" />
+      </label>
+      <br />
+
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" placeholder="your email" required/>
+      <label for="password">Password: </label>
+      <!-- not commonly supported minlength="5" maxlength="10" -->
+      <input type="password" id="password" name="password" pattern=".{5,10}" required title="5-10 characters needed" placeholder="your password" />
+      <br />
+
+      <label for="terms">I agree to the terms and conditions</label>
+      <input type="checkbox" id="terms" name="tc" />
+      <br />
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

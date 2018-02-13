@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <!-- action is where form sends the data -->
+    <!-- method is GET or POST for the HTTP Method type -->
+    <!-- default is GET if method not provided -->
+    <!-- default action is same page if not provided  -->
+    <!-- name are the param names provided to backend -->
+    <form>
+      <label for="email">Email:</label>
+      <!-- required attribute ensures that it must be present to be valid -->
+      <input type="text" name="email" placeholder="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" placeholder="password" required>
+
+      <!-- Nest inputs in labels, for attribute needs to match input id -->
+      <label>Color: <input type="color" name="color" /></label>
+
+      <input type="submit" name="Input Submit"/>
+      <button>Button Submit</button>
+    </form>
+
+    <h2>More input types</h2>
+    <form>
+      <!-- radio typcically for only one choice -->
+      <!-- Using the same name makes them mutally exclusive -->
+      <!-- value needed in radio for readble version vs just on -->
+      <label for "dog">Dogs</label>
+      <input type="radio" id="dog" name="petChoice" value="dogs" />
+
+      <label for "cat">Cats</label>
+      <input type="radio" id="cat" name="petChoice" value="cat" />
+
+      <label for "checkbox">Checkbox</label>
+      <input type="checkbox" name="checkbox" />
+
+      <select name="color">
+        <option value="color_red">
+          Red
+        </option>
+        <option value="color_orange">
+          Orange
+        </option>
+        <option value="color_yellow">
+          Yellow
+        </option>
+      </select>
+
+      <!-- rows cols to change size -->
+      <textarea rows="10" cols="50" name="haiku"></textarea>
+    </form>
+  </body>
+</html>

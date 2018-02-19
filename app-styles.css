@@ -1,0 +1,34 @@
+
+h1 {
+  color: purple;
+  background: #181818;
+  border-color: #131313;
+  border-width: medium;
+  border-style: solid;
+}
+
+h2 {
+  color: #FF8282;
+  /*
+  border-color: #131313;
+  border-width: medium;
+  border-style: solid;
+  */
+
+  /* shortcut */
+  border: 5px solid #131313;
+}
+
+h3 {
+  color: rgb(68, 100, 10);
+}
+
+body {
+  background: #DD1818;
+
+  /*
+  background: url('http://images.all-free-download.com/images/graphiclarge/wood_grain_highdefinition_picture_3_169735.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+}

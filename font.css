@@ -1,0 +1,34 @@
+body {
+  font-size: 10px;  
+}
+
+p {
+  /* font-family: "Arial"; */ /* not guranteed on a machine */
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  /* font-family: "Georgia"; */ /* not guranteed on a machine */
+  font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 2.0em;
+  line-height: 1.5; /* spacing between lines */
+}
+
+/* em */
+/* relative font size */
+
+span {
+  /* Double font size of parent */
+  /* Dynamic */
+  font-size: 2.0em;
+  font-weight: bold;
+}

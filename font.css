@@ -1,10 +1,36 @@
 body {
-  font-size: 10px;  
+  font-size: 10px;
 }
 
 p {
   /* font-family: "Arial"; */ /* not guranteed on a machine */
   font-family: 'Open Sans', sans-serif;
+
+  /* surround content in element */
+  border: 2px solid blue;
+
+ /* maniuplates the box that contains the content */
+  /*width: 200px;
+  height: 300px;*/
+
+  /* percent based of parent element */
+  /*width: 50%; */
+
+  /* padding is between border and content */
+  padding: 40px; /* left, right, top, bottom */
+
+  padding-left: 60px;
+
+  /* Space outside of border, between elements */
+  margin-bottom: 100px;
+
+  /* top, right, bottom , left, goes clockwise */
+  margin: 10px 20px 30px 40px;
+
+  /* to center */
+  margin: 0 auto 0 auto;
+
+  /* margin: 0 auto; same as above */
 }
 
 h1 {

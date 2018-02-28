@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <link rel="stylesheet"  type="text/css" href="./css/bootstrap.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Coffee First</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to the Jungle</h1>
+        <p>
+          Bootstrap is fun isn't it?
+        </p>
+        <button class="btn btn-success btn-lg">Yes!</button>
+      </div>
+
+      <h1>Regular Form</h1>
+      <form>
+        <div class="form-group">
+          <label for="emailInput">Email</label>
+          <input class="form-control" id="emailInput" type="text" placeholder="Enter Email"  />
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <input class="form-control" id="passwordInput" type="password" placeholder="Enter Password" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <h1>Inline Form</h1>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="emailInput">Email</label>
+          <input id="emailInput" type="text" placeholder="Enter Email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <input id="passwordInput" type="password" placeholder="Enter Password" class="form-control" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <h1>Bootstrap Basics</h1>
+      <button class="btn btn-primary btn-lg">Sign Up</button>
+      <a class="btn btn-info btn-lg" href="http://www.getbootstrap.com">Get Bootstrap</a>
+      <button class="btn btn-danger btn-lg" disabled="disabled">Dont Click</button>
+    </div>
+  </body>
+</html>

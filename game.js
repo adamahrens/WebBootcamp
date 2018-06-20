@@ -1,8 +1,6 @@
 var secret = 4;
 var correctlyGuessed = false;
 
-
-
 while(correctlyGuessed === false) {
   // prompt returns a string
   var guess = prompt("Guess a number");
@@ -15,5 +13,11 @@ while(correctlyGuessed === false) {
     alert("Too low!");
   } else {
     alert("Too high");
+  }
+}
+
+for (var count = 0; count <= 25; count++) {
+  if (count % 5 === 0) {
+    
   }
 }

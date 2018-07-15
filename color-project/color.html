@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="color.css">
   </head>
   <body class="darkness">
-    <h1>The Great <span id="color-to-guess">(R,G,B)</span> Color Game</h1>
+    <h1>The Great
+      <br />
+      <span id="color-to-guess">(R,G,B)</span>
+      <br />
+      Color Game
+    </h1>
     <div class="stripe">
       <button>New Colors</button>
       <span id="message"></span>
       <span>
-        <button id="easy">Easy</button>
-        <button id="medium">Medium</button>
-        <button id="hard" class="selected">Hard</button>
+        <button id="easy" class="game-mode" value=3>Easy</button>
+        <button id="medium" class="game-mode" value=6>Medium</button>
+        <button id="hard" class="game-mode selected" value=9>Hard</button>
       </span>
     </div>
     <div class="container">

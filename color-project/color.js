@@ -3,6 +3,7 @@ var colors = randomColors(difficulty);
 var pickedColor = pickRandomColor(colors);
 var message = document.querySelector("#message");
 var squares = document.getElementsByClassName('square');
+var gameModes = document.getElementsByClassName('game-mode');
 var colorToGuess = document.getElementById('color-to-guess');
 var header = document.getElementsByTagName("h1")[0];
 var newGameButton = document.querySelector("button");
@@ -17,7 +18,7 @@ for(var i = 0; i < squares.length; i++) {
       setTextContent(message, "Correct");
       setColor(header, pickedColor);
       for(var i = 0; i < difficulty; i++) {
-        squares[i].style.backgroundColor = colors[i];
+        setColor(squares[i], colors[i]);
         setColor(squares[i], pickedColor);
       }
       setTextContent(newGameButton, "Play Again");
@@ -28,20 +29,12 @@ for(var i = 0; i < squares.length; i++) {
   });
 }
 
-document.querySelector("#easy").addEventListener("click", function(){
-  difficulty = 3;
-  setupGame();
-});
-
-document.querySelector("#medium").addEventListener("click", function(){
-  difficulty = 6;
-  setupGame();
-});
-
-document.querySelector("#hard").addEventListener("click", function(){
-  difficulty = 9;
-  setupGame();
-});
+for(var i =0; i < gameModes.length; i++) {
+  gameModes[i].addEventListener("click", function(){
+    difficulty = Number(this.value);
+    setupGame();
+  });
+}
 
 document.querySelector("button").addEventListener("click", function(){
   setupGame();
@@ -59,7 +52,7 @@ function setupGame() {
     setColor(squares[i], colors[i]);
   }
 
-  setColor(header, defaultBackground);
+  setColor(header, "steelblue");
 
   var easy = document.querySelector("#easy");
   var med = document.querySelector("#medium");

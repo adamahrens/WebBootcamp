@@ -1,21 +1,85 @@
-var colors = randomColors(6);
+var difficulty = 9;
+var colors = randomColors(difficulty);
 var pickedColor = pickRandomColor(colors);
 var message = document.querySelector("#message");
 var squares = document.getElementsByClassName('square');
-document.getElementById('color-to-guess').textContent = pickedColor;
+var colorToGuess = document.getElementById('color-to-guess');
+var header = document.getElementsByTagName("h1")[0];
+var newGameButton = document.querySelector("button");
+var defaultBackground = "#232323"
 
+setupGame();
+
+// Listeners
 for(var i = 0; i < squares.length; i++) {
-  squares[i].style.backgroundColor = colors[i];
   squares[i].addEventListener("click", function(){
     if (this.style.backgroundColor == pickedColor) {
-      message.textContent = "Correct!";
-      setColors(squares, pickedColor);
-      setColor(document.getElementsByTagName("h1")[0], pickedColor);
+      setTextContent(message, "Correct");
+      setColor(header, pickedColor);
+      for(var i = 0; i < difficulty; i++) {
+        squares[i].style.backgroundColor = colors[i];
+        setColor(squares[i], pickedColor);
+      }
+      setTextContent(newGameButton, "Play Again");
     } else {
-      setColor(this, "#232323");
-      message.textContent = "Try Again";
+      setColor(this, defaultBackground);
+      setTextContent(message, "Try Again");
     }
   });
+}
+
+document.querySelector("#easy").addEventListener("click", function(){
+  difficulty = 3;
+  setupGame();
+});
+
+document.querySelector("#medium").addEventListener("click", function(){
+  difficulty = 6;
+  setupGame();
+});
+
+document.querySelector("#hard").addEventListener("click", function(){
+  difficulty = 9;
+  setupGame();
+});
+
+document.querySelector("button").addEventListener("click", function(){
+  setupGame();
+});
+
+function setupGame() {
+  colors = randomColors(difficulty);
+  pickedColor = pickRandomColor(colors);
+  setColors(squares, defaultBackground);
+  setTextContent(colorToGuess, pickedColor);
+  setTextContent(message, "");
+  setTextContent(newGameButton, "New Colors");
+  for(var i = 0; i < difficulty; i++) {
+    squares[i].style.backgroundColor = colors[i];
+    setColor(squares[i], colors[i]);
+  }
+
+  setColor(header, defaultBackground);
+
+  var easy = document.querySelector("#easy");
+  var med = document.querySelector("#medium");
+  var hard = document.querySelector("#hard");
+
+  easy.classList.remove('selected');
+  med.classList.remove('selected');
+  hard.classList.remove('selected');
+
+  switch(difficulty) {
+    case 3:
+      easy.classList.add('selected');
+      break;
+    case 6:
+      med.classList.add('selected');
+      break;
+    case 9:
+      hard.classList.add('selected');
+      break;
+  }
 }
 
 function setColors(arr, color) {
@@ -26,6 +90,10 @@ function setColors(arr, color) {
 
 function setColor(element, color) {
   element.style.backgroundColor = color;
+}
+
+function setTextContent(element, text) {
+  element.textContent = text;
 }
 
 function pickRandomColor(colors) {

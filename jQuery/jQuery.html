@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Fun</title>
+
+  </head>
+  <body>
+    <h1>jQuery Demo</h1>
+    <ul>
+      <li>
+        1. Include jQuery via scrip tag
+      </li>
+      <li>
+        2. Place at the bottom of the body
+      </li>
+      <li>
+        3. Profit $$$
+      </li>
+    </ul>
+    <p>
+      Howler monkeys are <span id='monkey-description'>wicked</span>
+    </p>
+    <p>
+      document.querySelector('h1').style.color = 'black';
+    </p>
+    <h4>vs</h4>
+    <p>
+      $('h1').css('color', 'blue')
+    </p>
+
+    <div>
+      Div 1
+    </div>
+    <div class="highlight">
+      Div 2
+    </div>
+    <div id="third">
+      Div 3
+    </div>
+    <div class="highlight">
+      Div 4
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $('body').css('background', 'yellow');
+    $('li').css('color', 'red');
+    $('div').css('background', 'purple');
+    $('div.highlight').css('width', '200px');
+    $('#third').css('border', '2px solid orange');
+    $('div').first().css('color', 'pink');
+    </script>
+  </body>
+</html>

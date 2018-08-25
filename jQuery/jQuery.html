@@ -41,6 +41,12 @@
     <div class="highlight">
       Div 4
     </div>
+    <div>
+      <button id="special-button">Click Me</button>
+    </div>
+    <div>
+      <input type="text" id="special-input" />
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script type="text/javascript">
     $('body').css('background', 'yellow');
@@ -49,6 +55,38 @@
     $('div.highlight').css('width', '200px');
     $('#third').css('border', '2px solid orange');
     $('div').first().css('color', 'pink');
+    $('#special-button').on('click', function(){
+      $(this).css('color', 'red');
+      $(this).css('background', 'black');
+      var textOfButton = $(this).text();
+      console.log('You clicked ' + textOfButton);
+      console.log('Special button clicked');
+    });
+    $('#special-input').keypress(function(event){
+      if (event.which == 13) {
+        console.log('Enter pressed');
+      } else {
+        console.log(String.fromCharCode(event.which));
+      }
+    });
+
+    $('#special-input').on('keypress', function(event){
+      console.log('On - keypress');
+    });
+
+    $('.highlight').on('click', function(event){
+      console.log('Highlighted div clicked');
+    });
+
+    $('li').on('mouseenter', function(event){
+      $(this).css('font-weight', 700);
+    });
+
+    $('li').on('mouseleave', function(event){
+      $(this).css('font-weight', 300);
+    });
+
+
     </script>
   </body>
 </html>

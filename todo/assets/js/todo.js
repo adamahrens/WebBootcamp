@@ -21,10 +21,14 @@ $('#add-todo').keypress(function(event) {
     var todo = $(this).val();
     // Ensure we have something
     if (todo.length > 0) {
-      console.log('Add todo = ' + todo);
-      $('.todo-list').append('<li class="todo-item">' + todo + '<span><i class="far fa-trash-alt"></i></span></li>')
+      $('.todo-list').append('<li class="todo-item">' + todo + '<span class="trash"><i class="far fa-trash-alt"></i></span></li>')
       // Delete the text
       $(this).val('');
     }
   }
+});
+
+// Toggle showing/hiding of input
+$('#todo-add-toggle').on('click', function() {
+  $('.todo-input').fadeToggle(500);
 });

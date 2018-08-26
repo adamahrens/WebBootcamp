@@ -31,6 +31,10 @@ body {
   margin: 0;
 }
 
+.todo-header span {
+  padding-left: 30px;
+}
+
 .todo-input input {
   width: 70%;
   font-size: 28px;

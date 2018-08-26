@@ -31,4 +31,8 @@ $('#add-todo').keypress(function(event) {
 // Toggle showing/hiding of input
 $('#todo-add-toggle').on('click', function() {
   $('.todo-input').fadeToggle(500);
+
+  // Toggle show/hide
+  $('#todo-add-toggle i').toggleClass('fa-eye-slash')
+  $('#todo-add-toggle i').toggleClass('fa-eye')
 });

@@ -4,20 +4,68 @@
     <meta charset="utf-8">
     <title>Patatap Clone</title>
     <link rel="stylesheet" href="./css/patatap.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.js"></script>
     <script type="text/javascript" src="./js/paper-full.js"></script>
     <script type="text/paperscript" canvas="patatap-canvas">
+
+      var sounds = [
+          new Howl({src: ['sounds/bubbles.mp3']}),
+          new Howl({src: ['sounds/clay.mp3']}),
+          new Howl({src: ['sounds/confetti.mp3']}),
+          new Howl({src: ['sounds/corona.mp3']}),
+          new Howl({src: ['sounds/dotted-spiral.mp3']}),
+          new Howl({src: ['sounds/flash-1.mp3']}),
+          new Howl({src: ['sounds/flash-2.mp3']}),
+          new Howl({src: ['sounds/flash-3.mp3']}),
+          new Howl({src: ['sounds/glimmer.mp3']}),
+          new Howl({src: ['sounds/moon.mp3']}),
+          new Howl({src: ['sounds/pinwheel.mp3']}),
+          new Howl({src: ['sounds/piston-1.mp3']}),
+          new Howl({src: ['sounds/piston-2.mp3']}),
+          new Howl({src: ['sounds/piston-3.mp3']}),
+          new Howl({src: ['sounds/prism-1.mp3']}),
+          new Howl({src: ['sounds/prism-2.mp3']}),
+          new Howl({src: ['sounds/splits.mp3']}),
+          new Howl({src: ['sounds/squiggle.mp3']}),
+          new Howl({src: ['sounds/strike.mp3']}),
+          new Howl({src: ['sounds/suspension.mp3']}),
+          new Howl({src: ['sounds/timer.mp3']}),
+          new Howl({src: ['sounds/ufo.mp3']}),
+          new Howl({src: ['sounds/veil.mp3']}),
+          new Howl({src: ['sounds/wipe.mp3']}),
+          new Howl({src: ['sounds/zig-zag.mp3']})
+        ];
     	// Create a Paper.js Path to draw a line into it:
-    	var path = new Path();
-    	// Give the stroke a color
-    	path.strokeColor = 'purple';
-    	var start = new Point(100, 100);
-    	// Move to start and draw a line from there
-    	path.moveTo(start);
-    	// Note the plus operator on Point objects.
-    	// PaperScript does that for us, and much more!
-    	path.lineTo(start + [ 100, -50 ]);
-      path.lineTo(start + [-100, -100]);
-      path.lineTo(start);
+      function onKeyDown(event) {
+        // Play a sound
+        var randomSound = Math.floor(Math.random() * sounds.length);
+        sounds[randomSound].play();
+
+        // Add a Circle
+        var maxPoint = new Point(paper.view.size.width, paper.view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+        var randomRadius = Math.floor(Math.random() * 500) + 50;
+        console.log("Random Radius = " + randomRadius);
+        var shape = new Shape.Circle(point, randomRadius);
+        shape.fillColor = getRandomColor();
+
+        // Animate
+        shape.onFrame = function(event) {
+          // Every frame, rotate the path by 3 degrees:
+          this.scale(0.95);
+          this.fillColor.hue += 1;
+        }
+      }
+
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
   </script>
   </head>
   <body>

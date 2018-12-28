@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flex Box</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./flex.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center display-4 border-bottom">Welcome to Flexbox with Bootstrap 4.1.3</h1>
+      <div class="buttons-container border border-dark d-flex justify-content-end">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+      <div class="buttons-container border border-dark d-flex justify-content-center">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+      <div class="buttons-container border border-dark d-flex justify-content-around">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-primary btn-lg">Large2</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+
+      <p>
+        Changing column properties. We have flex-column, flex-column-reverse, flex-row (default), flex-row-reverse
+      </p>
+      <div class="buttons-container border border-dark d-flex flex-column justify-content-around">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-primary btn-lg">Large2</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+
+      <div class="buttons-container border border-dark d-flex flex-column-reverse justify-content-around align-items-end">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-primary btn-lg">Large2</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+
+      <p>
+        Default is to stretch elements. Use align to fix that
+        </p>
+      <div class="buttons-container border border-dark d-flex justify-content-center align-items-center">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+
+      <p>
+        Align items at the start
+        </p>
+      <div class="buttons-container border border-dark d-flex align-items-start">
+        <button type="button" name="button" class="btn btn-info btn-lg">Large</button>
+        <button type="button" name="button" class="btn btn-warning btn-sm">Small</button>
+      </div>
+
+      <p>
+        Adding some flexibility for browser size. Adds some spacing but when size is reduced
+        they end up stacking. Use flex-cloumn and flex-md-row
+        </p>
+      <div class="border border-dark d-flex flex-column flex-md-row justify-content-between">
+        <button type="button" name="button" class="btn btn-dark btn-lg">Home</button>
+        <button type="button" name="button" class="btn btn-dark btn-lg">Contact</button>
+        <button type="button" name="button" class="btn btn-dark btn-lg">Apply</button>
+        <button type="button" name="button" class="btn btn-dark btn-lg">Careers</button>
+        <button type="button" name="button" class="btn btn-dark btn-lg">Pricing</button>
+      </div>
+    </div>
+  </body>
+</html>

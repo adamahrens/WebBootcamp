@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grid Time</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./flex.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  </head>
+  <body class="mt-5">
+    <div class="container">
+      <h1 class="text-center display-4">The Grid</h1>
+      <p>
+        Using col-6 to split in half. Adding m-0 for margin 0 on top, right, bottom, left
+      </p>
+      <div class="row border border-primary">
+        <h3 class="col-6 bg-secondary text-white m-0">1 of 2</h3>
+        <h3 class="col-6 bg-dark text-white m-0">2 of 2</h3>
+      </div>
+      <div class="row border border-primary mt-3">
+        <h3 class="col-4 bg-secondary text-white m-0">col-4</h3>
+        <h3 class="col-8 bg-dark text-white m-0">col-8</h3>
+      </div>
+      <p>
+        Make it response to split half and then stack when size is reduced. Use col-sm. Also utilize big displays to take up more room
+      </p>
+      <div class="row border border-primary">
+        <h3 class="col-sm-6 col-xl-3 bg-secondary text-white m-0">1 of 2</h3>
+        <h3 class="col-sm-6 col-xl-9 bg-dark text-white m-0">2 of 2</h3>
+      </div>
+
+      <p>
+        Just use col to make everythign equal. No matter the number of elements
+      </p>
+      <div class="row border border-primary">
+        <h3 class="col bg-secondary text-white m-0">1 of 2</h3>
+        <h3 class="col bg-dark text-white m-0">2 of 2</h3>
+      </div>
+      <div class="row border border-primary">
+        <h3 class="col bg-secondary text-white m-0">1 of 3</h3>
+        <h3 class="col bg-dark text-white m-0">2 of 3</h3>
+        <h3 class="col bg-secondary text-white m-0">3 of 3</h3>
+      </div>
+      <div class="row border border-primary">
+        <h3 class="col bg-secondary text-white m-0">1 of 4</h3>
+        <h3 class="col bg-dark text-white m-0">2 of 4</h3>
+        <h3 class="col bg-secondary text-white m-0">3 of 4</h3>
+        <h3 class="col bg-dark text-white m-0">4 of 4</h3>
+      </div>
+      <div class="row border border-primary">
+        <h3 class="col bg-secondary text-white m-0">Should be 2</h3>
+        <h3 class="col-8 bg-dark text-white m-0">col 8</h3>
+        <h3 class="col bg-secondary text-white m-0">Should be 2</h3>
+      </div>
+    </div>
+  </body>
+</html>

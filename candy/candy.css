@@ -1,0 +1,42 @@
+body {
+  background-color: #F9D5D9;
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+
+.slogan {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.slogan h1 {
+  font-size: 50px;
+}
+
+@media(max-width: 1120px) {
+  .slogan h1 {
+    font-size: 30px;
+  }
+}
+
+.slash {
+  color: #EA1C2C;
+}
+
+#mainNavBar .navbar-brand {
+  color: #EA1C2C;
+  font-size: 2em;
+}
+
+#mainNavBar a {
+  font-size: 1.5em;
+  color: white;
+}
+
+#mainNavBar a:hover {
+  color: #EA1C2C;
+}
+
+#mainNavBar {
+  font-weight: 300;
+}

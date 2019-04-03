@@ -49,3 +49,5 @@ var person = {
 }
 person.dog.bark.call(person) // Returns Hello Leroy
 ```
+
+Can be helpful if you want to DRY functions in similar objects
